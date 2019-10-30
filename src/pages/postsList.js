@@ -7,7 +7,6 @@ import dataJson from '../data/data.json'
 const useStyles = createUseStyles({
   title: {
     textAlign: 'center'
-    // width: '100%'
   },
   cardWrapper: {
     display: 'flex',
