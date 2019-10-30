@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-function App() {
+// import component which you will use
+import Header from './components/headers'
+
+const App = () => {
   return (
     <div>
-      <header>
-        
-      </header>
+      <Header />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
