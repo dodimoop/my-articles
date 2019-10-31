@@ -1,6 +1,8 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
+// importdata.json
+import Data from './data/data'
 
 // import component which you will use
 import Header from './components/headers'
@@ -17,6 +19,10 @@ const useStyles = createUseStyles({
 
 const App = () => {
   const classes = useStyles()
+
+  // Save data to local storage
+  window.localStorage.setItem('articles', JSON.stringify([...Data]))
+
   return (
     <div className={classes.app}>
       <Header />
