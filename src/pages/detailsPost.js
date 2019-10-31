@@ -56,9 +56,9 @@ const DetailsPost = ({ match }) => {
         <div className={classes.wrappedDetailsPost}>
           <h1 className={classes.author}>{dataPost.title}</h1>
           <p className={classes.body}>{dataPost.body}</p>
-          <h3 className={classes.title}>
+          <p className={classes.title}>
             <i>- {dataPost.author}</i>
-          </h3>
+          </p>
         </div>
       )}
     </div>
