@@ -3,9 +3,6 @@ import { createUseStyles } from 'react-jss'
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-// import data.json
-import dataJson from '../data/data'
-
 const useStyles = createUseStyles({
   paper: {
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
@@ -43,8 +40,10 @@ const DetailsPost = ({ match }) => {
   const [dataPost, setDataPost] = useState('')
 
   useEffect(() => {
-    // Handle for finding data from match to data.json
-    const findData = dataJson.find(
+    // Handle for get data from local storage
+    const articles = JSON.parse(localStorage.getItem('articles'))
+
+    const findData = articles.find(
       data => Number(data.id) === Number(match.params.id)
     )
     setDataPost(findData)
