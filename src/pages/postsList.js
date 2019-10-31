@@ -17,6 +17,9 @@ const useStyles = createUseStyles({
     flexWrap: 'wrap'
   },
   cards: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
     background: '#fff',
     borderRadius: '2px',
@@ -30,14 +33,9 @@ const useStyles = createUseStyles({
   dataTitle: {
     textAlign: 'center'
   },
-  body: {
-    textAlign: 'justify',
-    overflow: 'auto',
-    maxHeight: 180,
-    padding: 10
-  },
   author: {
-    padding: 10
+    padding: 10,
+    textAlign: 'center'
   }
 })
 
@@ -55,7 +53,6 @@ const PostsList = ({ history }) => {
             onClick={() => history.push(`/details-post/${data.id}`)}
           >
             <h4 className={classes.dataTitle}>{data.title}</h4>
-            <p className={classes.body}>{data.body}</p>
             <i className={classes.author}>- {data.author}</i>
           </div>
         ))}
