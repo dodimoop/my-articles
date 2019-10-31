@@ -6,6 +6,13 @@ import Input from '../components/input'
 import Button from '../components/button'
 
 const useStyles = createUseStyles({
+  paper: {
+    boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+    background: '#fff',
+    margin: '1rem',
+    padding: 20,
+    width: '95%'
+  },
   addNewPost: {
     display: 'flex',
     justifyContent: 'center'
@@ -36,7 +43,7 @@ const AddNewPost = () => {
   const classes = useStyles()
 
   return (
-    <div>
+    <div className={classes.paper}>
       <h3 className={classes.title}>ADD NEW POST</h3>
       <Input className={classes.inputTitle} placeholder="Input title" />
       <div className={classes.textareaWrapper}>
