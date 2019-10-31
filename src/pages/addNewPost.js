@@ -3,6 +3,7 @@ import { createUseStyles } from 'react-jss'
 
 // import component which you will use
 import Input from '../components/input'
+import Button from '../components/button'
 
 const useStyles = createUseStyles({
   addNewPost: {
@@ -42,6 +43,7 @@ const AddNewPost = () => {
         <textarea className={classes.textarea} placeholder="Input content" />
       </div>
       <Input className={classes.inputTitle} placeholder="Input author" />
+      <Button>Submit</Button>
     </div>
   )
 }
