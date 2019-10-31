@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import PropTypes from 'prop-types'
 
 // import data.json
 import dataJson from '../data/data.json'
@@ -21,16 +24,24 @@ const useStyles = createUseStyles({
     margin: '1rem',
     position: 'relative',
     width: '20%',
-    padding: 15
+    padding: 15,
+    cursor: 'pointer'
   },
-  content: {
+  dataTitle: {
+    textAlign: 'center'
+  },
+  body: {
     textAlign: 'justify',
     overflow: 'auto',
-    maxHeight: 180
+    maxHeight: 180,
+    padding: 10
+  },
+  author: {
+    padding: 10
   }
 })
 
-const PostsList = () => {
+const PostsList = ({ history }) => {
   const classes = useStyles()
 
   return (
@@ -38,17 +49,23 @@ const PostsList = () => {
       <h3 className={classes.title}>POSTS LIST</h3>
       <div className={classes.cardWrapper}>
         {dataJson.map(data => (
-          <div className={classes.cards} key={data.id}>
-            <span>
-              <h4>{data.title}</h4>
-              <p className={classes.content}>{data.body}</p>
-              <i>- {data.author}</i>
-            </span>
+          <div
+            className={classes.cards}
+            key={data.id}
+            onClick={() => history.push(`/details-post/${data.id}`)}
+          >
+            <h4 className={classes.dataTitle}>{data.title}</h4>
+            <p className={classes.body}>{data.body}</p>
+            <i className={classes.author}>- {data.author}</i>
           </div>
         ))}
       </div>
     </div>
   )
+}
+
+PostsList.propTypes = {
+  history: PropTypes.object.isRequired
 }
 
 export default PostsList
