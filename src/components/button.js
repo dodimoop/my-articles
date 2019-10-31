@@ -8,17 +8,17 @@ const useStyles = createUseStyles({
     justifyContent: 'center'
   },
   buttonStyle: {
-    padding: 20,
-    margin: 20,
-    width: '20%',
+    padding: 10,
+    margin: 10,
+    width: '15%',
     cursor: 'pointer',
     fontSize: 16,
-    border: '1px solid #264f9d',
+    border: '1px solid #ff9000',
     backgroundColor: 'white',
-    color: '#264f9d',
+    color: '#ff9000',
     '&:hover': {
       color: '#ffffff',
-      backgroundColor: '#264f9d'
+      backgroundColor: '#ff9000'
     },
     '&:focus': {
       outline: 'none'
