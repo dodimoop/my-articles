@@ -4,9 +4,6 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import PropTypes from 'prop-types'
 
-// import data.json
-import dataJson from '../data/data.json'
-
 const useStyles = createUseStyles({
   title: {
     textAlign: 'center'
@@ -42,11 +39,13 @@ const useStyles = createUseStyles({
 const PostsList = ({ history }) => {
   const classes = useStyles()
 
+  const articles = JSON.parse(localStorage.getItem('articles'))
+
   return (
     <div>
       <h3 className={classes.title}>POSTS LIST</h3>
       <div className={classes.cardWrapper}>
-        {dataJson.map(data => (
+        {articles.map(data => (
           <div
             className={classes.cards}
             key={data.id}
