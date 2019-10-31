@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
     background: '#fff',
     margin: '1rem',
-    padding: 10,
+    padding: 20,
     width: '95%'
   },
   title: {
@@ -28,7 +28,7 @@ const PasswordGenerator = () => {
   const buttonPassword = () => {
     let resultPassword = ''
     const mixCharacters =
-      '+-tu!)@#cdefghiSTUV<~>ab%^&$jkqr*(svwq56LMyz0189ABCD27EFGHIJK34NOPQRlmnopWQYX'
+      '+tu!#cdefg[hi;ST<UV>ab^&$jkqr*(svwq5}6LMy-z0189{AB%CD27]EFGHIJ~K34N@O|PQRl:mno)pWQYX'
     for (let i = 0; i <= 11; i += 1) {
       const random = Math.floor(Math.random() * mixCharacters.length)
       resultPassword += mixCharacters.charAt(random)
