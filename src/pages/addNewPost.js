@@ -20,13 +20,6 @@ const useStyles = createUseStyles({
   title: {
     textAlign: 'center'
   },
-  inputTitle: {
-    display: 'flex',
-    justifyContent: 'center',
-    width: '50%',
-    padding: '10px',
-    margin: '10px'
-  },
   textareaWrapper: {
     display: 'flex',
     justifyContent: 'center'
@@ -45,11 +38,11 @@ const AddNewPost = () => {
   return (
     <div className={classes.paper}>
       <h3 className={classes.title}>ADD NEW POST</h3>
-      <Input className={classes.inputTitle} placeholder="Input title" />
+      <Input placeholder="Input title" />
       <div className={classes.textareaWrapper}>
         <textarea className={classes.textarea} placeholder="Input content" />
       </div>
-      <Input className={classes.inputTitle} placeholder="Input author" />
+      <Input placeholder="Input author" />
       <Button>Submit</Button>
     </div>
   )
