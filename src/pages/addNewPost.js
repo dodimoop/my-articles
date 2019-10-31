@@ -7,7 +7,6 @@ import { maxBy } from 'lodash'
 // import component which you will use
 import Input from '../components/input'
 import Button from '../components/button'
-import dataJson from '../data/data'
 
 const useStyles = createUseStyles({
   paper: {
@@ -43,9 +42,8 @@ const useStyles = createUseStyles({
 
 const AddNewPost = ({ history }) => {
   const classes = useStyles()
-
-  // data.json
-  const dataExisting = [...dataJson]
+  // data from data.json
+  const articles = JSON.parse(localStorage.getItem('articles'))
 
   // getter and setter
   const [title, setTitle] = useState('')
@@ -81,7 +79,7 @@ const AddNewPost = ({ history }) => {
     }
 
     // handle get last id
-    const getMaxId = maxBy(dataJson, o => {
+    const getMaxId = maxBy(articles, o => {
       return o.id
     })
 
@@ -93,7 +91,8 @@ const AddNewPost = ({ history }) => {
       body
     }
 
-    dataExisting.push(newDataPost)
+    articles.push(newDataPost)
+    window.localStorage.setItem('articles', JSON.stringify(articles))
     history.push('/')
   }
 
