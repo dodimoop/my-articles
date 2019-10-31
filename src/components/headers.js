@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     justifyContent: 'center'
   },
   button: {
-    border: '1px solid blue',
+    border: '1px solid #264f9d',
     backgroundColor: '#ffffff',
     width: '100%',
     padding: 20,
@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
   },
   menuActive: {
     border: 'none',
-    backgroundColor: 'blue',
+    backgroundColor: '#264f9d',
     color: 'white'
   }
 })
