@@ -48,7 +48,7 @@ const Card = ({ title, author, onClick }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  author: PropTypes.any.isRequired,
   onClick: PropTypes.func
 }
 Card.defaultProps = {
