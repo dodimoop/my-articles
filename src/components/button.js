@@ -13,12 +13,12 @@ const useStyles = createUseStyles({
     width: '20%',
     cursor: 'pointer',
     fontSize: 16,
-    border: '1px solid green',
+    border: '1px solid #264f9d',
     backgroundColor: 'white',
-    color: 'green',
+    color: '#264f9d',
     '&:hover': {
       color: '#ffffff',
-      backgroundColor: 'green'
+      backgroundColor: '#264f9d'
     },
     '&:focus': {
       outline: 'none'
